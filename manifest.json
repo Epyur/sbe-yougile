@@ -1,7 +1,7 @@
 {
   "id": "sbe-yougile",
   "name": "SBE YouGile",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "minAppVersion": "1.11.4",
   "description": "Центральный сервис авторизации YouGile: единый API-ключ и клиент для всех плагинов системы SBE.",
   "author": "Полищук Евгений (polishchuk@tn.ru)",

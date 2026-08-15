@@ -81,7 +81,8 @@ export default class SbeYougilePlugin extends Plugin {
       client: {
         getProjects: () => client.getProjects(),
         getBoards: () => client.getBoards(),
-        getColumns: () => client.getColumns(),
+        getColumns: (boardId?: string) => client.getColumns(boardId),
+        getColumnById: (id: string) => client.getColumnById(id),
         getUsers: () => client.getUsers(),
         getTasks: () => client.getTasks(),
         getTaskById: (id: string) => client.getTaskById(id),
@@ -90,6 +91,7 @@ export default class SbeYougilePlugin extends Plugin {
         getGroupChats: () => client.getGroupChats(),
         getChatMessages: (chatId: string) => client.getMessages(chatId),
         sendChatMessage: (chatId: string, text: string) => client.sendMessage(chatId, text),
+        getTaskChatSubscribers: (taskId: string) => client.getTaskChatSubscribers(taskId),
         uploadFile: async (file: { name: string; data: ArrayBuffer }) => {
           const result = await client.uploadFile(file.data, file.name);
           return result.fullUrl;

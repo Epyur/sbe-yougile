@@ -37,6 +37,13 @@
 
 ## История работ
 
+### 2026-08-15 — v0.1.1 (sbe-tasks)
+- `SbeYougileApi.client` в sbe-core расширен: добавлены `getColumns(boardId?)`,
+  `getColumnById`, `getTaskChatSubscribers`; делегирование добавлено в `buildApi()`
+  (`src/main.ts`).
+- Версия 0.1.0 → **0.1.1** (manifest + package.json).
+- `npx tsc --noEmit` EXIT=0; `npm run build` OK.
+
 ### 2026-08-15 — v0.1.0 (создание)
 - Плагин создан по дизайну `docs/superpowers/specs/2026-08-15-sbe-yougile-design.md`
   (фаза 2 SBE-системы).
@@ -45,6 +52,13 @@
 - `npx tsc --noEmit` EXIT=0; `npm run build` OK (`main.js` + `styles.css`).
 - В реестре `sbe-apstore-registry/registry.json` добавлена запись `sbe-yougile` (не required).
 - Репозиторий `Epyur/sbe-yougile` создан, инициирующий коммит запушен.
+
+## Статистика ошибок и отступлений
+
+- Инлайн-извлечение сообщения `e instanceof Error ? e.message : String(e)`
+  вместо `errorMessage()` — **1 место** (`src/ui/settings-tab.ts:85`).
+- Прочих нарушений (`any`, `fetch`, bare `setTimeout`, `catch` без `unknown`,
+  инлайн-стили) нет. Сборка и типы — без ошибок и предупреждений.
 
 ## Правила
 
