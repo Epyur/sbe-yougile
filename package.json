@@ -1,6 +1,6 @@
 {
   "name": "sbe-yougile",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "SBE YouGile — центральный сервис авторизации YouGile",
   "main": "main.js",
   "scripts": {
